@@ -5,8 +5,6 @@ stages:
       image: golang:1.11
       shellScript: |-
         mkdir -p /go
-        cd /go
-        go build
 - name: Publish
   steps:
   - publishImageConfig:
