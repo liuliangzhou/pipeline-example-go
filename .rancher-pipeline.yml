@@ -5,10 +5,8 @@ stages:
       image: golang:1.11
       shellScript: |-
         mkdir -p /go
-        ln -s `pwd` /go/pipeline-example-go
-        cd /go/pipeline-example-go
-        go build -o bin/hello-server
-        go test -cover
+        cd /go
+        go build
 - name: Publish
   steps:
   - publishImageConfig:
