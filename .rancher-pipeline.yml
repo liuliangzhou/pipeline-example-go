@@ -4,9 +4,9 @@ stages:
   - runScriptConfig:
       image: golang:1.11
       shellScript: |-
-        mkdir -p /go/src/github.com/liuliangzhou
-        ln -s `pwd` /go/src/github.com/liuliangzhou/pipeline-example-go
-        cd /go/src/github.com/liuliangzhou/pipeline-example-go
+        mkdir -p /go
+        ln -s `pwd` /go/pipeline-example-go
+        cd /go/pipeline-example-go
         go build -o bin/hello-server
         go test -cover
 - name: Publish
